@@ -38,11 +38,11 @@ resource "kubernetes_deployment" "mic" {
             "--logtostderr"
           ]
           resources {
-            limits {
+            limits = {
               cpu    = "200m"
               memory = "512Mi"
             }
-            requests {
+            requests = {
               cpu    = "100m"
               memory = "256Mi"
             }

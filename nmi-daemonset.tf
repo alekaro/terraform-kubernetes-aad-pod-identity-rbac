@@ -66,11 +66,11 @@ resource "kubernetes_daemonset" "nmi" {
           }
 
           resources {
-            limits {
+            limits = {
               cpu    = "200m"
               memory = "512Mi"
             }
-            requests {
+            requests = {
               cpu    = "100m"
               memory = "256Mi"
             }
